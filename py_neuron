@@ -1,0 +1,35 @@
+def n1_func():
+    n1=input("Color of square (choose red or green): ")
+    if n1=="red":
+        n1_out=0
+    if n1=="green":
+        n1_out=1
+    return n1_out
+    
+def n2_func():
+    n2=input("Color of square (choose red or green): ")
+    if n2=="red":
+        n2_out=0
+    if n2=="green":
+        n2_out=1
+    return n2_out
+    
+def n3_func():
+    n3=input("Color of square (choose red or green): ")
+    if n3=="red":
+        n3_out=0
+    if n3=="green":
+        n3_out=1
+    return n3_out
+
+n1_res=n1_func()
+n2_res=n2_func()
+n3_res=n3_func()
+
+weight=1
+
+n4=weight*(n1_res+n2_res+n3_res)
+if n4>=2:
+    print("Most squares are green")
+else:
+    print("Most squares are red")
