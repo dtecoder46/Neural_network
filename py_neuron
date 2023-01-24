@@ -21,8 +21,24 @@ def n3_func():
     if n3=="green":
         n3_out=1
     return n3_out
+
+def n4_func():
+    n4=input("Color of square (choose red or green): ")
+    if n4=="red":
+        n4_out=0
+    if n4=="green":
+        n4_out=1
+    return n4_out
+
+def n5_func():
+    n5=input("Color of square (choose red or green): ")
+    if n5=="red":
+        n5_out=0
+    if n5=="green":
+        n5_out=1
+    return n5_out
     
-def visuals(n1_res,n2_res,n3_res):
+def visuals(n1_res,n2_res,n3_res,n4_res,n5_res):
     if n1_res==1:
         print("🟩",end=" ")
     if n1_res==0:
@@ -35,18 +51,28 @@ def visuals(n1_res,n2_res,n3_res):
         print("🟩",end=" ")
     if n3_res==0:
         print("🟥",end=" ")
+    if n4_res==1:
+        print("🟩",end=" ")
+    if n4_res==0:
+        print("🟥",end=" ")
+    if n5_res==1:
+        print("🟩",end=" ")
+    if n5_res==0:
+        print("🟥",end=" ")
 
 
 n1_res=n1_func()
 n2_res=n2_func()
 n3_res=n3_func()
+n4_res=n4_func()
+n5_res=n5_func()
 
-visuals(n1_res,n2_res,n3_res)
+visuals(n1_res,n2_res,n3_res,n4_res,n5_res)
 
 weight=1
 
-n4=weight*(n1_res+n2_res+n3_res)
-if n4>=2:
+n5=weight*(n1_res+n2_res+n3_res+n4_res+n5_res)
+if n5>=3:
     print("\nMost squares are green")
 else:
     print("\nMost squares are red")
