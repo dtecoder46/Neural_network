@@ -25,54 +25,53 @@ def n3_func():
 def n4_func():
     n4=input("Color of square (choose red or green): ")
     if n4=="red":
-        n4_out=0
-    if n4=="green":
-        n4_out=1
-    return n4_out
+def n_func():
+    n=input("Color of square (choose r or g): ")
+    if n=="r":
+        n_out=0
+    if n=="g":
+        n_out=1
+    return n_out
 
-def n5_func():
-    n5=input("Color of square (choose red or green): ")
-    if n5=="red":
-        n5_out=0
-    if n5=="green":
-        n5_out=1
-    return n5_out
-    
-def visuals(n1_res,n2_res,n3_res,n4_res,n5_res):
-    if n1_res==1:
-        print("🟩",end=" ")
-    if n1_res==0:
-        print("🟥",end=" ")
-    if n2_res==1:
-        print("🟩",end=" ")
-    if n2_res==0:
-        print("🟥",end=" ")
-    if n3_res==1:
-        print("🟩",end=" ")
-    if n3_res==0:
-        print("🟥",end=" ")
-    if n4_res==1:
-        print("🟩",end=" ")
-    if n4_res==0:
-        print("🟥",end=" ")
-    if n5_res==1:
-        print("🟩",end=" ")
-    if n5_res==0:
-        print("🟥",end=" ")
+def n_color(n_out):
+    if n_out==0:
+        return "🟥"
+    if n_out==1:
+        return "🟩"
 
+n1_res=n_func()
+n1_color=n_color(n1_res)
 
-n1_res=n1_func()
-n2_res=n2_func()
-n3_res=n3_func()
-n4_res=n4_func()
-n5_res=n5_func()
+n2_res=n_func()
+n2_color=n_color(n2_res)
 
-visuals(n1_res,n2_res,n3_res,n4_res,n5_res)
+n3_res=n_func()
+n3_color=n_color(n3_res)
+
+n4_res=n_func()
+n4_color=n_color(n4_res)
+
+n5_res=n_func()
+n5_color=n_color(n5_res)
+
+n6_res=n_func()
+n6_color=n_color(n6_res)
+
+n7_res=n_func()
+n7_color=n_color(n7_res)
+
+n8_res=n_func()
+n8_color=n_color(n8_res)
+
+n9_res=n_func()
+n9_color=n_color(n9_res)
 
 weight=1
 
-n5=weight*(n1_res+n2_res+n3_res+n4_res+n5_res)
-if n5>=3:
+print("\n"+n1_color,n2_color,n3_color+"\n"+n4_color,n5_color,n6_color+"\n"+n7_color,n8_color,n9_color)
+
+n_mul_add=weight*(n1_res+n2_res+n3_res+n4_res+n5_res+n6_res+n7_res+n8_res+n9_res)
+if n_mul_add>=5:
     print("\nMost squares are green")
 else:
     print("\nMost squares are red")
